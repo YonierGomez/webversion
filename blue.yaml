@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webmela
+  name: webmela
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webmela
+      color: blue
+  template:
+    metadata:
+      labels:
+        app: webmela
+        color: blue
+    spec:
+      containers:
+      - image: neytor/webversion
+        name: webversion
