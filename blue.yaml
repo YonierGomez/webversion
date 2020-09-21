@@ -4,6 +4,7 @@ metadata:
   labels:
     app: webmela
   name: webmela
+  namespace: bluegreen
 spec:
   replicas: 3
   selector:
